@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Cosmos
 
 class DetailHeroeViewController: UIViewController {
     
     @IBOutlet var imageHeroe: UIImageView?
     @IBOutlet var descriptionHeroe: UITextView?
+    @IBOutlet var scoreHeroe: CosmosView?
     
     var superheroe: Superheroe?
 
@@ -19,7 +21,11 @@ class DetailHeroeViewController: UIViewController {
         
         imageHeroe?.image = UIImage(named: superheroe?.image ?? "")
         descriptionHeroe?.text = superheroe?.description
+        scoreHeroe?.rating = superheroe?.score ?? 0.0
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = superheroe?.name
     }
     /*
     // MARK: - Navigation

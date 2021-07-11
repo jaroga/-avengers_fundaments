@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Cosmos
 
 class DetailVillainViewController: UIViewController {
     
     @IBOutlet var imageVillain: UIImageView?
     @IBOutlet var descriptionVillain: UITextView?
+    @IBOutlet var scoreVillain: CosmosView?
     
     var villain: Villain?
 
@@ -19,7 +21,12 @@ class DetailVillainViewController: UIViewController {
         
         imageVillain?.image = UIImage(named: villain?.image ?? "")
         descriptionVillain?.text = villain?.description
+        scoreVillain?.rating = villain?.score ?? 0.0
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = villain?.name
     }
     
     /*

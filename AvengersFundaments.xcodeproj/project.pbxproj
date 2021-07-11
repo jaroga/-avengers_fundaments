@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,7 @@
 		E1A6B22D2696446300D3A43F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6B22B2696446300D3A43F /* LaunchScreen.storyboard */; };
 		E1ABD1B2269B09E300B659C7 /* DetailHeroeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABD1B1269B09E300B659C7 /* DetailHeroeViewController.swift */; };
 		E1ABD1B4269B164000B659C7 /* DetailVillainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABD1B3269B164000B659C7 /* DetailVillainViewController.swift */; };
+		E1ABD1B7269B25E000B659C7 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = E1ABD1B6269B25E000B659C7 /* Cosmos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1ABD1B7269B25E000B659C7 /* Cosmos in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +225,9 @@
 			dependencies = (
 			);
 			name = AvengersFundaments;
+			packageProductDependencies = (
+				E1ABD1B6269B25E000B659C7 /* Cosmos */,
+			);
 			productName = AvengersFundaments;
 			productReference = E1A6B21D2696446200D3A43F /* AvengersFundaments.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +255,9 @@
 				Base,
 			);
 			mainGroup = E1A6B2142696446200D3A43F;
+			packageReferences = (
+				E1ABD1B5269B25E000B659C7 /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = E1A6B21E2696446200D3A43F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -493,6 +501,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1ABD1B5269B25E000B659C7 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1ABD1B6269B25E000B659C7 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1ABD1B5269B25E000B659C7 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1A6B2152696446200D3A43F /* Project object */;
 }

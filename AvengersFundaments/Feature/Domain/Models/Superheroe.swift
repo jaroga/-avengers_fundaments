@@ -10,7 +10,7 @@ import Foundation
 typealias Superheroes = [Superheroe]
 
 class Superheroe: Character {
-    override init(name: String, lastname: String, image: String, score: Float, description: String) {
+    override init(name: String, lastname: String, image: String, score: Double, description: String) {
         super.init(name: name, lastname: lastname, image: image, score: score, description: description)
     }
 }
